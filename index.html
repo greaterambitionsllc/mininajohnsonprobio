@@ -1105,10 +1105,19 @@
     nav { padding: 0.75rem 1.5rem; }
     .nav-links { gap: 1.2rem; }
     .nav-links a { font-size: 0.62rem; }
-    .hero { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; 
+           grid-template-rows: auto auto;
+      min-height: unset;
+          }    
     .hero-left { padding: 7rem 2rem 3rem; }
     .hero-left::after { display: none; }
-    .hero-right { display: none; }
+    .hero-right { display: flex;
+  flex-direction: column;
+  order: -1;
+  min-height: 60vw;
+  max-height: 480px;
+  padding: 4.5rem 0 0;
+  background: var(--charcoal);}
     .container { padding: 0 1.5rem; }
     .about-grid,
     .exp-grid,
