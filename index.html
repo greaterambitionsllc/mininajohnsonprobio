@@ -63,23 +63,6 @@
     transition: opacity 0.2s, color 0.2s;
   }
   .nav-links a:hover { opacity: 1; color: var(--gold); }
-
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-  }
-  .nav-hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--gold);
-  }
-.nav-links.open {
-  display: flex;
-}
   
   /* ── HERO ── */
   .hero {
@@ -1165,8 +1148,7 @@
       border-radius: 0;
     }
     .hero-image-wrapper > img {
-      object-fit: contain;
-      object-position: center 15%;
+      object-position: center 35%;
     }
     .hero-image-frame { display: none; }
     /* Stat bar: static flow at bottom of image panel */
@@ -1209,18 +1191,6 @@
     .book-cover { width: 180px; margin: 0 auto; }
     .about-accent-box { position: static; margin-top: 1rem; max-width: 100%; }
   }
-  .nav-hamburger { display: flex; }
-.nav-links {
-  display: none;
-  position: fixed;
-  top: 48px; left: 0; right: 0;
-  flex-direction: column;
-  background: rgba(28,28,28,0.98);
-  padding: 1.5rem 2rem;
-  gap: 1.2rem;
-  border-bottom: 1px solid rgba(168,118,5,0.2);
-  z-index: 99;
-}
 </style>
 </head>
 <body>
@@ -1228,9 +1198,7 @@
 <!-- ══ NAV ══ -->
 <nav>
   <a href="#" style="font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); text-decoration:none; opacity:1;">PROFESSIONAL BIO</a>
-  <button class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#frameworks">Frameworks</a></li>
