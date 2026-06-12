@@ -1117,8 +1117,11 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
     nav { padding: 0.75rem 1.5rem; }
-    .nav-links { gap: 1.2rem; }
-    .nav-links a { font-size: 0.62rem; }
+    .nav-links { flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 0.6rem 1rem;
+               max-width: 60%}
+    .nav-links a { font-size: 0.55rem; }
  
     /* Hero: photo on top, content below */
     .hero {
@@ -1145,7 +1148,9 @@
       border-radius: 0;
     }
     .hero-image-wrapper > img {
-      object-position: center 35%;
+      object-fit: contain;
+      object-position: center center;
+      background: var(--charcoal);
     }
     .hero-image-frame { display: none; }
     /* Stat bar: static flow at bottom of image panel */
